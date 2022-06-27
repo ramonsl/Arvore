@@ -158,30 +158,39 @@ public class Arvore {
 
     public void inOrder(Elemento atual) {
         System.out.println("IMPLEMENTAR");
+        //TODO inOrder
+        //ESQ-RAIZ-DIR
     }
 
     public void preOrder(Elemento atual) {
         System.out.println("IMPLEMENTAR");
+        //TODO preOrder
+        //RAIZ - ESQ - DIR
     }
 
     public void posOrder(Elemento atual) {
         System.out.println("IMPLEMENTAR");
+        //TODO posOrder
+        //ESQ - DIR- RAIZ
     }
 
     public int altura(Elemento atual) {
         System.out.println("IMPLEMENTAR");
+        //TODO Altura Da Arvore
         return 0;
 
     }
 
     public int folhas(Elemento atual) {
         System.out.println("IMPLEMENTAR");
+        //TODO Numero de folhas
         return 0;
 
     }
 
     public int contarNos(Elemento atual) {
         System.out.println("IMPLEMENTAR");
+        //TODO Numero de nós.
         return 0;
     }
 
