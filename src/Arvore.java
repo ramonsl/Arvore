@@ -157,40 +157,69 @@ public class Arvore {
     }
 
     public void inOrder(Elemento atual) {
-        System.out.println("IMPLEMENTAR");
-        //TODO inOrder
+        if (atual != null) {
+            inOrder(atual.esq);
+            System.out.print(atual.item + ", ");
+            inOrder(atual.dir);
+        } else {
+            System.out.println("Your tree is empty");
+        }
         //ESQ-RAIZ-DIR
     }
 
     public void preOrder(Elemento atual) {
-        System.out.println("IMPLEMENTAR");
-        //TODO preOrder
+        if (atual != null) {
+            System.out.print(atual.item + ", ");
+            preOrder(atual.esq);
+            preOrder(atual.dir);
+        }
+        else {
+            System.out.println("Your tree is empty");
+        }
         //RAIZ - ESQ - DIR
     }
 
     public void posOrder(Elemento atual) {
-        System.out.println("IMPLEMENTAR");
-        //TODO posOrder
+        if (atual != null) {
+            posOrder(atual.esq);
+            posOrder(atual.dir);
+            System.out.print(atual.item + ", ");
+        } else {
+            System.out.println("Your tree is empty");
+        }
         //ESQ - DIR- RAIZ
     }
 
     public int altura(Elemento atual) {
-        System.out.println("IMPLEMENTAR");
-        //TODO Altura Da Arvore
+        if (atual != null) {
+            int leftDepth = altura(atual.esq);
+            int rightDepth = altura(atual.dir);
+
+            if (leftDepth > rightDepth) {
+                return (leftDepth + 1);
+            } else {
+                return (rightDepth + 1);
+            }
+        }
         return 0;
 
     }
 
     public int folhas(Elemento atual) {
-        System.out.println("IMPLEMENTAR");
-        //TODO Numero de folhas
+        if (atual != null) {
+            if (atual.esq == null && atual.dir == null) {
+                return 1;
+            }
+            return folhas(atual.esq) + folhas(atual.dir);
+        }
         return 0;
 
     }
 
     public int contarNos(Elemento atual) {
-        System.out.println("IMPLEMENTAR");
-        //TODO Numero de nós.
+        if (atual != null) {
+            return 1 + contarNos(atual.esq) + contarNos(atual.dir);
+        }
         return 0;
     }
 
